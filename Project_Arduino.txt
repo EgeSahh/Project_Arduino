@@ -1,0 +1,11 @@
+Proje kapsamında geliştirlen sistem için yazılan Arduino kodu hakkında:
+
+-Sistemde su yokken RGB led kırmızı yanar ve buzzer çalışır. 
+-Arduino suyun varlığını anladığında RGB led yeşile döner ve buzzer çalışmayı durdurur. 
+-Toprağın nemini ölçen sensör sayesinde, yetersiz nem varsa motor 1 saniye çalışır ve 40 ml su verir.  Ardından sistem 10 saniye beklemeye geçer.
+-10 saniye beklendikten sonra eğer haznedeki su yeterliyse tekrar nem verisi ile toprağın 
+ nem değeri kontrol edilir. Topraktaki nem değeri yeterli değilse tekrar 1 saniye motor çalışır ve sistem  10  saniye kadar beklemeye geçer. 
+-Şayet haznede yeterli miktarda su bulunmuyorsa motor durur, RGB tekrar kırmızı yanar ve buzzer çalışır   duruma geçer.
+ Bluetooth ile veri alışverişi sırasında maksimum 255 değerinde veri aktarılmaktadır. 
+-Sulama başlatılmak istendiğinde, gönderilen 253 değeri ile sistem çalışır. Aynı şekilde 254 değeri,    ardunioya gider ve sistem çalışmayı durdurur. Gelen veri yoksa "gelenVeri" adlı değişkene 0 atanır  (Default Değer). 
+
